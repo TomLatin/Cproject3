@@ -40,15 +40,19 @@ int print_lines(char firstWord[],char comperWord[])
             {
                 count++;
                 int j=1;
-                i++;
+                i2=i;
+                i2++;
+
                 for (j=1; j < lenF && (flag==0) ; j++)
                 {
-                  if (comperWord[i]!=firstWord[j])
+                  if (comperWord[i2]!=firstWord[j])
                   {
-                    flag = 1;
+                    flag=1;
                   }
                 }
                 
+
+
             }
         }
         
