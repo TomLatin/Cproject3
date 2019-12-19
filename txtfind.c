@@ -22,13 +22,13 @@ int subString(char* comperWord,char* firstWord)
         {
             w++;
             printf("w: %d \n",w);
-            int j=i+1;
+            int j=0;
             printf("j: %d \n",j);
             int flag=1;
-            for (j=i+1; j<lenF && flag==1; j++)
+            for (j=0; j<lenF && flag==1; j++)
             {
                  printf("j: %d \n",j);
-                if (comperWord[j]!=firstWord[w])
+                if (comperWord[j+i]!=firstWord[w])
                 {
                    flag=0;
                    printf("flag: %d \n",flag);
