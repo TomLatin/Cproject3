@@ -4,10 +4,10 @@
 
 int subString(char* comperWord,char* firstWord)
 {
-    size_t lenC =strlen(comperWord);
-      printf("lenC: %ld \n",lenC);
-    size_t lenF=strlen(firstWord);
-    printf("lenF: %ld \n",lenF);
+    int lenC =strlen(comperWord);
+      printf("lenC: %d \n",lenC);
+    int lenF=strlen(firstWord);
+    printf("lenF: %d \n",lenF);
     int i=0,w=0;
     if (lenC<lenF)
     {
@@ -25,8 +25,9 @@ int subString(char* comperWord,char* firstWord)
             int j=i+1;
             printf("j: %d \n",j);
             int flag=1;
-            for (j=i+1; j<=lenF && flag==1; j++)
+            for (j=i+1; j<lenF && flag==1; j++)
             {
+                 printf("j: %d \n",j);
                 if (comperWord[j]!=firstWord[w])
                 {
                    flag=0;
@@ -39,7 +40,7 @@ int subString(char* comperWord,char* firstWord)
                 }
             }
 
-            if (w==lenF-1 && flag==1)
+            if (w==lenF && flag==1)
             {
                 return 1;
             }
@@ -48,6 +49,7 @@ int subString(char* comperWord,char* firstWord)
             {
                 w=0;
             } 
+
         }
     }
     return 0;

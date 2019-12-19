@@ -3,9 +3,10 @@
 #include <string.h>
 int main()
 {
-    char t1[3]={'a','b','a'};
-    char t2[3]={'a','b','a'};
-    int ans =subString(t1,t2);
+    char t1[]="yyababay";
+    char t2[]="ababa";
+    
+    int ans = subString(t1,t2);
     if (ans==1)
     {
         printf("ture");
