@@ -32,8 +32,8 @@ int print_lines(char firstWord[],char comperWord[])
     else
     {
         int i=0;
+        int flag=0;
         int count=0;
-        int ans=0;
         for ( i = 0; i < lenC; i++)
         {
             if (comperWord[i]==firstWord[0])
@@ -41,16 +41,13 @@ int print_lines(char firstWord[],char comperWord[])
                 count++;
                 int j=1;
                 i++;
-                for (j=1; j < lenF; j++)
+                for (j=1; j < lenF && (flag==0) ; j++)
                 {
                   if (comperWord[i]!=firstWord[j])
                   {
-                    ans= 0;
+                    flag = 1;
                   }
-                  
                 }
-
-                ans= 1;
                 
             }
         }
