@@ -2,5 +2,5 @@
 #define  LINE 256
 #define  WORD 30
 
-int print_similar_words(char firstWord[],char comperWord[]);
-int print_lines(char firstWord[],char comperWord[]);
+int similar(char* comperWord,char* firstWord);
+int subString(char* comperWord,char* firstWord);

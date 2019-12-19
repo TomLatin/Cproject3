@@ -2,63 +2,58 @@
 #include <stdio.h>
 #include "txtfind.h"
 
-int  print_similar_words(char firstWord[],char comperWord[])
+int subString(char* comperWord,char* firstWord)
 {
-    
-}
-
-int print_lines(char firstWord[],char comperWord[])
-{
-    int lenF=strlen(firstWord);
-    int lenC=strlen(comperWord);
-    if(lenC<lenC)
+    size_t lenC =strlen(comperWord);
+      printf("lenC: %ld \n",lenC);
+    size_t lenF=strlen(firstWord);
+    printf("lenF: %ld \n",lenF);
+    int i=0,w=0;
+    if (lenC<lenF)
     {
+        printf("lenC<lenF");
         return 0;
     }
-    else if(lenF==lenC)
+
+    for ( i = 0; i < lenC; i++)
     {
-        int i=0;
-        int len=strlen(firstWord);
-        for ( i = 0; i < len; i++)
+        printf("i: %d \n",i);
+        if (comperWord[i]==firstWord[w])
         {
-           if (firstWord[i]!=comperWord[i])
-           {
-              return 0;
-           }
-        }
-        
-        return 1;
-    }
-    else
-    {
-        int i=0;
-        int flag=0;
-        int count=0;
-        for ( i = 0; i < lenC; i++)
-        {
-            if (comperWord[i]==firstWord[0])
+            w++;
+            printf("w: %d \n",w);
+            int j=i+1;
+            printf("j: %d \n",j);
+            int flag=1;
+            for (j=i+1; j<=lenF && flag==1; j++)
             {
-                count++;
-                int j=1;
-                i2=i;
-                i2++;
-
-                for (j=1; j < lenF && (flag==0) ; j++)
+                if (comperWord[j]!=firstWord[w])
                 {
-                  if (comperWord[i2]!=firstWord[j])
-                  {
-                    flag=1;
-                  }
+                   flag=0;
+                   printf("flag: %d \n",flag);
                 }
-                
-
-
+                else
+                {
+                    printf("w: %d \n",w);
+                    w++;
+                }
             }
+
+            if (w==lenF-1 && flag==1)
+            {
+                return 1;
+            }
+
+            else
+            {
+                w=0;
+            } 
         }
-        
-     
-        
     }
-    
+    return 0;
 }
 
+int similar(char* comperWord,char* firstWord)
+{
+
+}
