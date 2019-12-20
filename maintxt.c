@@ -3,8 +3,8 @@
 #include <string.h>
 int main()
 {
-    char t1[]="aba";
-    char t2[]="aba";
+    char t1[]="atbadfgh";
+    char t2[]="atba";
     
     int ans = subString(t1,t2);
     if (ans==1)

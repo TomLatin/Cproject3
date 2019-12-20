@@ -15,10 +15,10 @@ int subString(char* comperWord,char* firstWord)
 
     for ( i = 0; i < lenC; i++)
     {
-        if (comperWord[i]==firstWord[0] && i+lenF<lenC)
+        if (comperWord[i]==firstWord[0])
         {
             int j=0;
-            for (j=0; j<=lenF ; j++)
+            for (j=0; j<lenF ; j++)
             {
                 if (comperWord[i+j]==firstWord[j])
                 {
