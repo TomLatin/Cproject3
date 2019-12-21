@@ -24,7 +24,6 @@ int subString(char* comperWord,char* firstWord)
                 {
                     count++;
                 }
-      
             }
 
             if (count==lenF)
@@ -40,5 +39,34 @@ int subString(char* comperWord,char* firstWord)
 
 int similar(char* comperWord,char* firstWord)
 {
+    int lenC =strlen(comperWord);
+    int lenF=strlen(firstWord);
+    int i=0;
+    int index=0;
+    if(lenC==lenF)
+    {
+        return subString(comperWord,firstWord);
+    }
+    else
+    {
+        for ( i = 0; i < lenC; i++)
+        {
+            if(comperWord[i]==firstWord[index])
+            {
+                index++;
+            }
+        }
 
+        if (index==lenF)
+        {
+            return 1;
+        }
+
+        else
+        {
+            return 0;
+        }
+        
+    }
+    
 }
