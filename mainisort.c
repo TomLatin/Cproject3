@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include "isort.h"
-#define SIZE 50
-
 
 int main()
 {

@@ -21,7 +21,7 @@ void insertion_sort(int* arr,int len)
 
 int i=1,j=1,counter=0, temp=0;
 
-for (int i = 1; i < len; i++)
+for ( i = 1; i < len; i++)
 {
     j=i;
     counter=0;
