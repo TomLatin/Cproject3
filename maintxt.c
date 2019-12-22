@@ -81,7 +81,7 @@ int main()
                     flag=similar(comperWord,firstWord);
                     if(flag==1)
                     {
-                        printf("%s",comperWord);
+                        printf("%s \n",comperWord);
                     }
                     index=0;
                 }
