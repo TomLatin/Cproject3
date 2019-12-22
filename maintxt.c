@@ -14,7 +14,7 @@ int main()
 
     while ((index<LINE) && (flag==0))
     {
-        if(temp[index]!=('\n') || temp[index]!=('\t') || temp[index]!=(' '))
+        if(temp[index]!=('\n') && temp[index]!=('\t') && temp[index]!=(' ') )
         {
             firstWord[index]=temp[index];
             index++;
@@ -68,7 +68,7 @@ int main()
           flag=0;
           for ( i = 0; i < LINE ; i++)
           {
-            if(temp[i]!=('\n') || temp[i]!=('\t') || temp[i]!=(' '))
+            if(temp[i]!=('\n') && temp[i]!=('\t') && temp[i]!=(' ') && temp[i]!='\0')
             {
                 comperWord[index]=temp[index];
                 index++;
