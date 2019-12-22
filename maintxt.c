@@ -70,7 +70,7 @@ int main()
           {
             if(temp[i]!=('\n') && temp[i]!=('\t') && temp[i]!=(' ') && temp[i]!='\0')
             {
-                comperWord[index]=temp[index];
+                comperWord[index]=temp[i];
                 index++;
             }
             else
