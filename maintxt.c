@@ -31,6 +31,7 @@ int main()
     }
 
     index=0;
+   fgets(temp,LINE,stdin);
 
     if (aORb=='a')
     {
@@ -39,7 +40,7 @@ int main()
           flag=0;
           for ( i = 0; i < LINE && (flag==0); i++)
           {
-            if(temp[i]!=('\n') || temp[i]!=('\t') || temp[i]!=(' '))
+            if(temp[i]!=('\n') && temp[i]!=('\t') && temp[i]!=(' ') && temp[i]!= '\0')
             {
                 comperWord[index]=temp[i];
                 index++;
